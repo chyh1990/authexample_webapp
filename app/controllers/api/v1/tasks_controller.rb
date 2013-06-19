@@ -19,4 +19,24 @@ class Api::V1::TasksController < ApplicationController
          }
 }'
   end
+
+  def updategeo
+    if params["latitude"].blank? || params["longitude"].blank?
+      badrequest
+      return
+    end
+    current_user.latitude = params["latitude"].to_f
+    current_user.longitude = params["longitude"].to_f
+    current_user.geotimestamp = DateTime.now
+    if current_user.save
+      render :status => 200, :json => {:success => true }
+    else
+      badrequest
+    end
+  end
+
+  protected
+  def badrequest
+    render :status => 400, :json => {:success => false }
+  end
 end

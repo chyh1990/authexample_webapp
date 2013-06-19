@@ -66,6 +66,7 @@ AuthexampleWebapp::Application.routes.draw do
         delete 'sessions' => 'sessions#destroy', :as => 'logout'
       end
       get 'tasks' => 'tasks#index', :as => 'tasks'
+      post 'updategeo' => 'tasks#updategeo'
     end
   end
 end
