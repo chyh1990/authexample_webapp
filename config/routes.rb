@@ -67,6 +67,8 @@ AuthexampleWebapp::Application.routes.draw do
       end
       get 'tasks' => 'tasks#index', :as => 'tasks'
       post 'updategeo' => 'tasks#updategeo'
+      post 'uploadfile' => 'file#uploadfile'
+      get 'listfile' => 'file#listfile'
     end
   end
 end
