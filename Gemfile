@@ -26,6 +26,8 @@ gem 'jquery-rails'
 gem 'activeadmin'
 gem 'meta_search', '>= 1.1.0.pre' # activeadmin needs this if Rails >= 3.1
 
+gem 'acts-as-taggable-on'
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
