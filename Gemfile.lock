@@ -167,7 +167,7 @@ GEM
     warden (1.2.1)
       rack (>= 1.0)
     websocket-driver (0.2.0)
-    yajl-ruby (1.1.0)
+    yajl-ruby (1.4.2)
 
 PLATFORMS
   ruby
